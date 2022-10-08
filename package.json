@@ -8,7 +8,12 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc && cp package.json README.md ./dist"
   },
-  "keywords": ["React", "Mobile banner", "Mobile header", "React mobile animated banner"],
+  "keywords": [
+    "React",
+    "Mobile banner",
+    "Mobile header",
+    "React mobile animated banner"
+  ],
   "author": "Matheus Mello",
   "license": "ISC",
   "devDependencies": {
@@ -16,5 +21,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.3.5"
   }
 }

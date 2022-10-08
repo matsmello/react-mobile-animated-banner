@@ -1,1 +1,1 @@
-export { Counter } from "./counter";
+export { GetTheAppBanner } from "./banner";
