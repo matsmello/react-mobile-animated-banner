@@ -1,12 +1,15 @@
 {
   "name": "react-mobile-animated-banner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This react component allows you to add the mobile banner to your application. It is really helpful when you need to refer your mobile application from your website.",
-  "main": "index.js",
+  "main": "src/components/index.ts",
+  "files": ["src/components/**/*"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc && cp package.json README.md ./dist"
+    "build": "npm run clean && tsc && cp package.json README.md ./dist",
+    "start": "react-scripts start",
+    "package:publish": "npm run build && npm publish ./dist"
   },
   "keywords": [
     "React",
@@ -20,9 +23,38 @@
     "@types/react": "^18.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "@chakra-ui/react": "^2.3.5",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "framer-motion": "^7.5.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.64",
+    "@types/react-dom": "^18.0.6",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "react-app-rewire-babel-loader": "^0.1.1",
+    "react-app-rewired": "^2.2.1"
   },
-  "dependencies": {
-    "@chakra-ui/react": "^2.3.5"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

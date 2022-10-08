@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { GetTheAppBanner } from 'react-mobile-animated-banner';
+import { GetTheAppBanner } from './components/index';
 
 function App() {
   return (

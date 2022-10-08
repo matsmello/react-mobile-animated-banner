@@ -2,13 +2,16 @@ import * as React from "react";
 
 import { useCallback, useState } from "react";
 
+import { Box, Flex, Text } from "@chakra-ui/react";
+
 const Image = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLImageElement> & React.ImgHTMLAttributes<HTMLImageElement>) => {
-  return <img {...props} />
+  return <img {...props}/>;
 }
 
 const closeIcon = "https://cdn-icons-png.flaticon.com/512/1828/1828778.png"
-const appRating = "https://cdn-icons-png.flaticon.com/512/1828/1828778.png"
-const ariveLogo = "https://cdn-icons-png.flaticon.com/512/1828/1828778.png"
+const appRating = "https://webshop.staging.arive.global/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fapp-rating.7dfc63d2.png&w=256&q=75"
+const ariveLogo = "https://webshop.staging.arive.global/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Farive-logo.89536ebb.png&w=96&q=75"
+
 type Props = {
   color?: string;
   size?: "lg" | "sm";
@@ -49,8 +52,6 @@ const Arive = ({
     </svg>
   );
 
-import { Box, Flex, Text } from "@chakra-ui/react";
-
 const isBoolean = (arg: any) => {
   return arg === true || arg === false;
 }
@@ -87,6 +88,7 @@ export const GetTheAppBanner = ({
 }: {
   hideBannerInitialValue?: boolean;
 }) => {
+
   const [hideBanner, setHideBanner] = useState(() => {
     if (isBoolean(hideBannerInitialValue)) return hideBannerInitialValue;
     return getCookie(cookiesEnum.APP_BANNER);
