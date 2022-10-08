@@ -1,7 +1,7 @@
 {
   "name": "react-mobile-animated-banner",
   "version": "1.0.0",
-  "description": "",
+  "description": "This react component allows you to add the mobile banner to your application. It is really helpful when you need to refer your mobile application from your website.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
