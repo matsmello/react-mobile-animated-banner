@@ -43,7 +43,7 @@ npm install react-mobile-animated-banner
 ### How to use it?
 
 ```
-import { GetTheAppBanner } from 'react-mobile-animated-banner';
+import { GetTheAppBanner } from "react-mobile-animated-banner/components";
 
 function YourApp() {
   return (

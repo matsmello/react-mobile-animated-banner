@@ -1,4 +1,3 @@
-//@ts-nocheck
 import * as React from "react";
 
 import { useCallback, useState, useEffect } from "react";
@@ -129,6 +128,7 @@ export const GetTheAppBanner = ({
   }
 
   return (
+    //@ts-ignore
     <div style={mainContainerStyle}>
       <div
         style={{ display: "flex", padding: "0px 16px", height: 59, alignItems: "center", borderBottom: 1, borderColor: "#CACACA" }}
@@ -136,7 +136,7 @@ export const GetTheAppBanner = ({
         <div onClick={closeAppBanner} style={{ padding: "0px 16px 0px 0px", height: 18, width: 10, display: "block" }} >
           <img src={closeIcon} width="18px" height="18px" style={{ height: 10, width: 10, display: "block" }} />
         </div>
-        <div px={4} style={{ padding: "16px 0px", height: "35px", display: "flex" }}>
+        <div style={{ padding: "16px 0px", height: "35px", display: "flex" }}>
           <img src={appLogo} width="35px" height="35px" style={{ borderRadius: 9, height: "35px", display: "block" }} />
         </div>
         <div
@@ -157,7 +157,7 @@ export const GetTheAppBanner = ({
         {/* Add the redirect URL */}
         <a onClick={onCTACallback} href={universalLink} data-testid="redirect-link" style={{ marginLeft: 'auto', cursor: "unset", textDecoration: 'none', border: "1px solid black", borderRadius: 7, height: 27, justifyContent: 'center', alignContent: 'center', alignItems: 'center', display: 'flex', alignSelf: 'center' }}>
           <div
-            style={{ width: 88, height: 27, border: 1, borderColor: 'black', borderRadius: 7, alignItems: 'center', justifyContent: 'center', justifyContent: 'center', alignContent: 'center', alignItems: 'center', display: 'flex', alignSelf: 'center' }}
+            style={{ width: 88, height: 27, border: 1, borderColor: 'black', borderRadius: 7, alignItems: 'center', justifyContent: 'center', alignContent: 'center', display: 'flex', alignSelf: 'center' }}
           >
             <p
               style={{ fontSize: 12, fontWeight: 500, color: 'black', textDecoration: 'none', margin: 0, padding: 0 }}
