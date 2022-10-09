@@ -1,9 +1,20 @@
+<a href="https://github.com/tanstack/table" target="\_parent">
+  <img alt="" src="https://img.shields.io/github/stars/matsmello/react-mobile-animated-banner.svg?style=social&label=Star" />
+</a>
+<a href="https://twitter.com/msmello_" target="\_parent">
+  <img alt="" src="https://img.shields.io/twitter/follow/msmello_.svg?style=social&label=Follow" />
+</a>
+<a href="https://www.linkedin.com/in/matheus-da-silveira-mello/" target="\_parent">
+  <img alt="" height="19" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
 ### React-mobile-animated-banner
 
 This react component allows you to add the mobile banner to your application. It is really helpful when you need to refer your mobile application from your website.
 ### Contents
 - [React-mobile-animated-banner](#react-mobile-animated-banner)
 - [Contents](#contents)
+- [Support](#support)
 - [Preview](#preview)
 - [How to install?](#how-to-install)
 - [How to use it?](#how-to-use-it)
@@ -11,11 +22,13 @@ This react component allows you to add the mobile banner to your application. It
 - [Goals](#goals)
 - [More Preview](#more-preview)
 
+### Support
+If you need any support or want to suggest improvements to the react-mobile-animated-banner repository, please open an issue at issues section or contact me via [LinkedIn](https://www.linkedin.com/in/matheus-da-silveira-mello/).
+
 ### Preview
 
 ![Showing the preview of the react-mobile-animated-banner using horizontal iPhone XR ](src/assets/images/iphone_top_horizontal.png 'Horizontal iPhone XR')
 
-  
 ### How to install?
 Using yarn:
 ```
