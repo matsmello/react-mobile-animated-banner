@@ -167,14 +167,20 @@ It will call when the user clicks on the CTA button
 <div align="center">
 
 ![Showing the preview of the react-mobile-animated-banner on the top side using iPhone XR ](src/assets/images/iphone_top.png 'iPhone XR')
+
 *iPhone XR with the react-mobile-animated-banner on top side*
+
 ___
 
 ![Showing the preview of the react-mobile-animated-banner on the bottom side using iPhone XR ](src/assets/images/mobile_bottom.png 'iPhone XR')
+
 *iPhone XR with the react-mobile-animated-banner on bottom side*
+
 ___
 
 ![Showing the preview of the react-mobile-animated-banner on the top side using an IPad Air](src/assets/images/tablet_top.png 'IPad Air')
+
 *IPad Air with the react-mobile-animated-banner on top side*
+
 
 </div>
