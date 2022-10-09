@@ -2,6 +2,8 @@
 import * as React from "react";
 
 import { useCallback, useState } from "react";
+import { getCookie, setCookie, cookiesEnum } from "../helpers/cookie";
+import { isAndroid, isIOS } from "../helpers/platform";
 
 const closeIcon = "https://cdn-icons-png.flaticon.com/512/1828/1828778.png"
 const appRating = "https://webshop.staging.arive.global/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fapp-rating.7dfc63d2.png&w=256&q=75"
@@ -51,37 +53,14 @@ const isBoolean = (arg: any) => {
   return arg === true || arg === false;
 }
 
-function getCookie(cname: string) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for (let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function setCookie(cname: string, cvalue: string | boolean, exdays = 30) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  let expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-const cookiesEnum = {
-  APP_BANNER: 'APP_BANNER',
-}
-
 export const GetTheAppBanner = ({
   hideBannerInitialValue,
+  onlyIOS,
+  onlyAndroid,
 }: {
   hideBannerInitialValue?: boolean;
+  onlyIOS?: boolean,
+  onlyAndroid?: boolean,
 }) => {
 
   const [hideBanner, setHideBanner] = useState(() => {
@@ -93,6 +72,14 @@ export const GetTheAppBanner = ({
     setCookie(cookiesEnum.APP_BANNER, true);
     setHideBanner(true);
   }, []);
+
+  if (onlyAndroid && !isAndroid()) {
+      return <></>
+  }
+
+  if (onlyIOS && !isIOS()) {
+    return <></>
+}
 
   if (hideBanner) {
     return <></>;
