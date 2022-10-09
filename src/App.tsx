@@ -6,7 +6,7 @@ import { GetTheAppBanner } from './components/index';
 function App() {
   return (
     <div className="App">
-      <GetTheAppBanner />
+      <GetTheAppBanner onMountingCallback={() => {console.log('onMounting')}} />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
