@@ -1,4 +1,4 @@
-<a href="https://github.com/tanstack/table" target="\_parent">
+<a href="https://github.com/matsmello/react-mobile-animated-banner" target="\_parent">
   <img alt="" src="https://img.shields.io/github/stars/matsmello/react-mobile-animated-banner.svg?style=social&label=Star" />
 </a>
 <a href="https://twitter.com/msmello_" target="\_parent">
