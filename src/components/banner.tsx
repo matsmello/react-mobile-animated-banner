@@ -1,12 +1,7 @@
+//@ts-nocheck
 import * as React from "react";
 
 import { useCallback, useState } from "react";
-
-import { Box, Flex, Text } from "@chakra-ui/react";
-
-const Image = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLImageElement> & React.ImgHTMLAttributes<HTMLImageElement>) => {
-  return <img {...props}/>;
-}
 
 const closeIcon = "https://cdn-icons-png.flaticon.com/512/1828/1828778.png"
 const appRating = "https://webshop.staging.arive.global/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fapp-rating.7dfc63d2.png&w=256&q=75"
@@ -104,60 +99,44 @@ export const GetTheAppBanner = ({
   }
 
   return (
-    <Flex
-      height="59px"
-      alignItems="center"
-      px={4}
-      borderBottom="1px"
-      borderColor="grey.inactiveText"
+    <div
+      style={{display: "flex", padding: "0px 16px", height: 59, alignItems: "center", borderBottom: 1, borderColor: "#CACACA"}}
     >
-      <Box py={"4px"} onClick={closeAppBanner}>
-        <Image src={closeIcon} width="18px" height="18px" />
-      </Box>
-      <Box px={4} height={"35px"}>
-        <Image src={ariveLogo} width="35px" height="35px" />
-      </Box>
-      <Flex
-        height="33.5px"
-        justifyContent={"space-between"}
-        flexDirection={"column"}
-        flex={1}
+      <div onClick={closeAppBanner} style={{padding: "0px 16px 0px 0px", height: 18, width: 18, display: "block"}} >
+        <img src={closeIcon} width="18px" height="18px"  style={{height: 10, width: 10, display: "block"}} />
+      </div>
+      <div px={4} style={{padding: "16px 0px", height: "35px", display: "flex"}}>
+        <img src={ariveLogo} width="35px" height="35px" style={{height: "35px", display: "block"}}/>
+      </div>
+      <div
+        style={{paddingLeft: "16px", height: "33.5px"}}
       >
         <Arive size={"sm"} />
 
-        <Flex>
-          <Image src={appRating} width="70px" height="10px" />
-          <Text
-            fontWeight={500}
-            ml={1}
-            fontSize={9}
+        <div style={{display: "flex"}}>
+          <img src={appRating} style={{height: 13.5 , width: 70}} width="70px" height="13.5px" />
+          <p
             data-testid="reviews"
+            style={{fontSize: 9, marginLeft: 6, fontWeight: 500, margin: 0}}
           >
             200+ reviews
-          </Text>
-        </Flex>
-      </Flex>
+          </p>
+        </div>
+      </div>
       {/* Add the redirect URL */}
-      <a href={""} data-testid="redirect-link">
-        <Flex
-          width={"88px"}
-          height="27px"
-          border="1px"
-          borderColor="black"
-          borderRadius="7px"
-          alignItems="center"
-          justifyContent={"center"}
+      <a href={""} data-testid="redirect-link" style={{marginLeft: 'auto', cursor: "unset", textDecoration: 'none', border: "1px solid black", borderRadius: 7, height: 27, justifyContent: 'center', alignContent: 'center', alignItems: 'center', display: 'flex', alignSelf: 'center'}}>
+        <div
+          style={{width: 88, height: 27, border: 1, borderColor: 'black', borderRadius: 7, alignItems: 'center', justifyContent: 'center',  justifyContent: 'center', alignContent: 'center', alignItems: 'center', display: 'flex', alignSelf: 'center'}}
         >
-          <Text
-            fontSize={12}
-            fontWeight={500}
+          <p
+            style={{fontSize: 12, fontWeight: 500, color: 'black', textDecoration: 'none', margin: 0, padding: 0}}
             data-testid="get-app-text-button"
           >
             Get the App
-          </Text>
-        </Flex>
+          </p>
+        </div>
       </a>
-    </Flex>
+    </div>
   );
 };
 
