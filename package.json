@@ -17,6 +17,14 @@
     "Mobile header",
     "React mobile animated banner"
   ],
+  "homepage": "https://github.com/matsmello/react-mobile-animated-banner#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matsmello/react-mobile-animated-banner.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/matsmello/react-mobile-animated-banner/issues"
+  },
   "author": "Matheus Mello",
   "license": "ISC",
   "devDependencies": {
